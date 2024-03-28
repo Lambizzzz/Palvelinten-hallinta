@@ -93,6 +93,9 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
        $ sudo salt-call --local -l info state.single user.absent terote08
    ![Näyttökuva 2024-3-28 kello 17 11 01](https://github.com/Lambizzzz/infra-as-code/assets/148875838/51647088-0c29-436b-a2d2-509dd6e2b567)
    
+5. cmd -tilafunktio
+      ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/cc02fc2f-820d-4f24-a8a4-0cdd3cb2f89e)
+
 ## f) Idempotentti
 
 ## g) Tietoa koneesta
