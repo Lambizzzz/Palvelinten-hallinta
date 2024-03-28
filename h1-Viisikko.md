@@ -23,7 +23,9 @@ Verkkosivun luominen GitHubissa
     
 ## a) Saltin asennus Macille
 Lataa macOS -käyttöjärjestelmälle suunniteltu asennustiedosto [Saltin -nettisivuilta](https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html)
-ja suorita tiedosto. 
+ja suorita tiedosto.  
+
+kesken
 
 ## b) Vagrant
 Kirjauduin Vagrantiin komennolla
@@ -48,7 +50,7 @@ Jos sinulla ei ole Vagrantia asennettuna, voit asentaa sen [Vagrantin -sivuilta]
 
 Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
 
-## Saltin asentaminen Linux-virtuaalikoneelle
+## d) Saltin asentaminen Linux-virtuaalikoneelle
 1. Käynnistin Linux-virtuaalikoneen ja kirjauduin sisään
 
        $ vagrant up
@@ -63,9 +65,26 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
        $sudo salt-call --version
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8cf253fc-448d-4772-a22a-ebd0f3f338b5)
 
-## Saltin 5 tärkeintä tilafunktiota
+## e) Saltin 5 tärkeintä tilafunktiota
+1. Asensin puun käyttämällä pkg -tilafunktiota
 
+       $ sudo salt-call --local -l info state.single pkg.installed tree
+   
+![Näyttökuva 2024-3-28 kello 13 44 23](https://github.com/Lambizzzz/infra-as-code/assets/148875838/dbb96b51-8dff-4e68-bafc-70ddcf25456b)
+
+2. Loin ja poistin tiedoston file -tilafunktiolla
+
+       $ sudo salt-call --local -l info state.single file.managed /tmp/hellotero
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/846a91cd-d22c-4eb6-b1b2-0dcd35dd61ed)
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/5e90d591-3849-4d62-a1cd-066658ec7fba)
+
+3. 
+
+## f) Idempotentti
+
+## g) Tietoa koneesta
+Keräsin Saltin grains.items -tekniikalla kolme mielenkiintoista tietoa virtuaalikoneesta.
 
 ## Lähteet
-https://developer.hashicorp.com/vagrant/install
-https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html
+1. https://developer.hashicorp.com/vagrant/install
+2. https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html
