@@ -26,4 +26,9 @@ Lataa macOS -käyttöjärjestelmälle suunniteltu asennustiedosto [Saltin -netti
 ja suorita tiedosto. 
 
 ## b) Vagrant
+Käynnistin Vagrantin komennolla
+
+        $ vagrant ssh
+
+![Näyttökuva 2024-3-28 kello 12 11 46](https://github.com/Lambizzzz/infra-as-code/assets/148875838/77a569df-8cbb-408a-b005-b720d7332f78)
 
