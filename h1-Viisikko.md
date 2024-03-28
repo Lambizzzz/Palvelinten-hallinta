@@ -78,8 +78,21 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/846a91cd-d22c-4eb6-b1b2-0dcd35dd61ed)
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/5e90d591-3849-4d62-a1cd-066658ec7fba)
 
-3. 
+3. Käytin service -tilafunktiota uudelleenkäynnistämään ja sulkemaan Apache 2 verkkopalvelimen
 
+       $ sudo salt-call --local -l info state.single service.running apache2 enable=True
+
+       $ sudo salt-call --local -l info state.single service.dead apache2 enable=False
+   ![Näyttökuva 2024-3-28 kello 16 52 00](https://github.com/Lambizzzz/infra-as-code/assets/148875838/edc85582-25cb-4f36-8715-e0d1725f34a3)
+   ![Näyttökuva 2024-3-28 kello 16 53 28](https://github.com/Lambizzzz/infra-as-code/assets/148875838/030bb8d0-f9cb-4f9e-ab67-6a54af49eea2)
+
+4. user -tilafunktio
+
+       $ sudo salt-call --local -l info state.single user.present terote08
+
+       $ sudo salt-call --local -l info state.single user.absent terote08
+   ![Näyttökuva 2024-3-28 kello 17 11 01](https://github.com/Lambizzzz/infra-as-code/assets/148875838/51647088-0c29-436b-a2d2-509dd6e2b567)
+   
 ## f) Idempotentti
 
 ## g) Tietoa koneesta
