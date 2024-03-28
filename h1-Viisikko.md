@@ -56,11 +56,14 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
        $ vagrant up
        $ vagrant ssh
    
-3. Asensin Saltin orjan
+3. Asensin Saltin herran ja orjan
 
        $ sudo apt-get update
+       $ sudo apt-get -y install salt-master
+   
+       $ sudo apt-get update
        $ sudo apt-get -y install salt-minion
-4. Tarkistin, että asennus oli toiminut
+5. Tarkistin, että asennus oli toiminut
    
        $sudo salt-call --version
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8cf253fc-448d-4772-a22a-ebd0f3f338b5)
