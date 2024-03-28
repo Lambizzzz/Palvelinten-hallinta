@@ -49,17 +49,22 @@ Jos sinulla ei ole Vagrantia asennettuna, voit asentaa sen [Vagrantin -sivuilta]
 Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
 
 ## Saltin asentaminen Linux-virtuaalikoneelle
-1. Käynnistä Linux-virtuaalikone ja kirjaudu sisään
+1. Käynnistin Linux-virtuaalikoneen ja kirjauduin sisään
 
        $ vagrant up
        $ vagrant ssh
    
-3. Asenna Saltin orja
+3. Asensin Saltin orjan
 
        $ sudo apt-get update
        $ sudo apt-get -y install salt-minion
-
+4. Tarkistin, että asennus oli toiminut
    
+       $sudo salt-call --version
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8cf253fc-448d-4772-a22a-ebd0f3f338b5)
+
+## Saltin 5 tärkeintä tilafunktiota
+
 
 ## Lähteet
 https://developer.hashicorp.com/vagrant/install
