@@ -81,7 +81,7 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/846a91cd-d22c-4eb6-b1b2-0dcd35dd61ed)
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/5e90d591-3849-4d62-a1cd-066658ec7fba)
 
-3. Käytin service -tilafunktiota uudelleenkäynnistämään ja sulkemaan Apache 2 verkkopalvelimen. Service -tilafunktiolla voi hallinnoida daemoneiden käynnistystä ja lopetusta
+3. Käytin service -tilafunktiota uudelleenkäynnistämään ja sulkemaan Apache 2 verkkopalvelimen. Service -tilafunktiolla voi hallinnoida daemoneiden käyttöönottoa.
 
        $ sudo salt-call --local -l info state.single service.running apache2 enable=True
 
@@ -96,15 +96,20 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
        $ sudo salt-call --local -l info state.single user.absent terote08
    ![Näyttökuva 2024-3-28 kello 17 11 01](https://github.com/Lambizzzz/infra-as-code/assets/148875838/51647088-0c29-436b-a2d2-509dd6e2b567)
    
-5. cmd -tilafunktio
+5. cmd -tilafunktiolla voi hallinnoida itse luotuja komentoja. Käytin tilafunktiota hyväksi luomalla tyhjän tiedoston lisäämällä ehdon, joka luo tiedoston vain jos semmoista tiedostoa jo ei ole olemassa.
+     
+       $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"
+   
       ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/cc02fc2f-820d-4f24-a8a4-0cdd3cb2f89e)
 
 ## f) Idempotentti
 
-"Idempotentti tietotekniikassa tarkoittaa operaatiota tai toimintoa, joka voi suorittaa saman operaation useita kertoja peräkkäin tuottamatta eri tulosta kuin kerran suoritettaessa,--" ChatGPT. 
+Idempotentti tietotekniikassa tarkoittaa operaatiota tai toimintoa, joka voi suorittaa saman operaation useita kertoja peräkkäin tuottamatta eri tulosta kuin kerran suoritettaessa. ChatGPT (2024).
+Tietokanta kysely voi esimerkiksi olla idempotentti, jos niitä voidaan suorittaa useita kertoja peräkkäin tuottamatta eri tulosta.
 
 ## g) Tietoa koneesta
 Keräsin Saltin grains.items -tekniikalla kolme mielenkiintoista tietoa virtuaalikoneesta.
+
 
 ## Lähteet
 1. https://developer.hashicorp.com/vagrant/install
