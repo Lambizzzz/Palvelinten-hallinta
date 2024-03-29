@@ -110,6 +110,14 @@ Tietokanta kysely voi esimerkiksi olla idempotentti, jos niitä voidaan suoritta
 ## g) Tietoa koneesta
 Keräsin Saltin grains.items -tekniikalla kolme mielenkiintoista tietoa virtuaalikoneesta.
 
+       $ sudo salt-call --local grains.items
+
+![Näyttökuva 2024-3-29 kello 20 49 13](https://github.com/Lambizzzz/infra-as-code/assets/148875838/d6f852dc-a331-4134-ab8a-3a5a005a04de)
+![Näyttökuva 2024-3-29 kello 20 50 02](https://github.com/Lambizzzz/infra-as-code/assets/148875838/edfc73c7-a789-41a0-bad7-ac7cc6209150)
+![Näyttökuva 2024-3-29 kello 20 50 46](https://github.com/Lambizzzz/infra-as-code/assets/148875838/49b09081-6d6a-45bd-9aef-5ab084cea5c5)
+
+
+
 
 ## Lähteet
 1. https://developer.hashicorp.com/vagrant/install
