@@ -69,19 +69,19 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8cf253fc-448d-4772-a22a-ebd0f3f338b5)
 
 ## e) Saltin 5 tärkeintä tilafunktiota
-1. Asensin puun käyttämällä pkg -tilafunktiota
+1. Tarkistin puun version käyttämällä pkg -tilafunktiota. Pkg -tilafunktiolla voi tarkistaa onko jokin sovellus asennettuna ja mikä asennusversio siitä on.
 
        $ sudo salt-call --local -l info state.single pkg.installed tree
    
 ![Näyttökuva 2024-3-28 kello 13 44 23](https://github.com/Lambizzzz/infra-as-code/assets/148875838/dbb96b51-8dff-4e68-bafc-70ddcf25456b)
 
-2. Loin ja poistin tiedoston file -tilafunktiolla
+2. Loin ja poistin tiedoston file -tilafunktiolla, jolla voi hallinnoida tiedostoja.
 
        $ sudo salt-call --local -l info state.single file.managed /tmp/hellotero
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/846a91cd-d22c-4eb6-b1b2-0dcd35dd61ed)
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/5e90d591-3849-4d62-a1cd-066658ec7fba)
 
-3. Käytin service -tilafunktiota uudelleenkäynnistämään ja sulkemaan Apache 2 verkkopalvelimen
+3. Käytin service -tilafunktiota uudelleenkäynnistämään ja sulkemaan Apache 2 verkkopalvelimen. Service -tilafunktiolla voi hallinnoida daemoneiden käynnistystä ja lopetusta
 
        $ sudo salt-call --local -l info state.single service.running apache2 enable=True
 
@@ -89,7 +89,7 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
    ![Näyttökuva 2024-3-28 kello 16 52 00](https://github.com/Lambizzzz/infra-as-code/assets/148875838/edc85582-25cb-4f36-8715-e0d1725f34a3)
    ![Näyttökuva 2024-3-28 kello 16 53 28](https://github.com/Lambizzzz/infra-as-code/assets/148875838/030bb8d0-f9cb-4f9e-ab67-6a54af49eea2)
 
-4. user -tilafunktio
+4. user -tilafunktiolla voi hallinnoida käyttäjätilejä, eli luoda, poistaa ja muokata. 
 
        $ sudo salt-call --local -l info state.single user.present terote08
 
@@ -100,6 +100,8 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
       ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/cc02fc2f-820d-4f24-a8a4-0cdd3cb2f89e)
 
 ## f) Idempotentti
+
+"Idempotentti tietotekniikassa tarkoittaa operaatiota tai toimintoa, joka voi suorittaa saman operaation useita kertoja peräkkäin tuottamatta eri tulosta kuin kerran suoritettaessa,--" ChatGPT. 
 
 ## g) Tietoa koneesta
 Keräsin Saltin grains.items -tekniikalla kolme mielenkiintoista tietoa virtuaalikoneesta.
