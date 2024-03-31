@@ -1,7 +1,7 @@
 # Ensimmäinen harjoitus, Viisikko
 ## x) Lue ja tiivistä
 Salt komentojen käyttö paikallisesti
-  1. Asenna Saltin herra-orja arkkitehtuuri
+  1. Asenna Saltin orja.
   3. Testaa Saltin tärkeimpiä tilafunktiota pkg, file, service, user ja cmd.
 
 Verkkosivun luominen GitHubissa
@@ -69,7 +69,7 @@ Näitä ohjeita seuraamalla olet luonut uuden Linux-virtuaalikoneen
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8cf253fc-448d-4772-a22a-ebd0f3f338b5)
 
 ## e) Saltin 5 tärkeintä tilafunktiota
-1. Tarkistin puun version käyttämällä pkg -tilafunktiota. Pkg -tilafunktiolla voi tarkistaa onko jokin sovellus asennettuna ja mikä asennusversio siitä on.
+1. Tarkistin, että puu oli asennettuna käyttämällä pkg -tilafunktiota. Pkg -tilafunktiolla voi tarkistaa onko jokin sovellus asennettuna ja mikä asennusversio siitä on.
 
        $ sudo salt-call --local -l info state.single pkg.installed tree
    
@@ -113,7 +113,9 @@ Keräsin Saltin grains.items -tekniikalla kolme mielenkiintoista tietoa virtuaal
        $ sudo salt-call --local grains.items
 
 ![Näyttökuva 2024-3-29 kello 20 49 13](https://github.com/Lambizzzz/infra-as-code/assets/148875838/d6f852dc-a331-4134-ab8a-3a5a005a04de)
+
 ![Näyttökuva 2024-3-29 kello 20 50 02](https://github.com/Lambizzzz/infra-as-code/assets/148875838/edfc73c7-a789-41a0-bad7-ac7cc6209150)
+
 ![Näyttökuva 2024-3-29 kello 20 50 46](https://github.com/Lambizzzz/infra-as-code/assets/148875838/49b09081-6d6a-45bd-9aef-5ab084cea5c5)
 
 
@@ -122,3 +124,4 @@ Keräsin Saltin grains.items -tekniikalla kolme mielenkiintoista tietoa virtuaal
 ## Lähteet
 1. https://developer.hashicorp.com/vagrant/install
 2. https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html
+3. https://terokarvinen.com/2024/configuration-management-2024-spring/
