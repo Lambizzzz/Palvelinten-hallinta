@@ -23,10 +23,12 @@ Verkkosivun luominen GitHubissa
     
 ## a) Saltin asennus Macille
 Lataa macOS -käyttöjärjestelmälle suunniteltu asennustiedosto [Saltin -nettisivuilta](https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html)
-ja suorita tiedosto.  
+ja suorita tiedosto. Sivustolta löytyy myös komennot ja ohjeet asennuksen tekemiseen. 
 
-kesken
+         $ sudo salt-config -i yourminionname -m yoursaltmaster
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/7972e2f5-38ca-47dc-87b9-5664bab8826a)
 
+Kokeilin ohjeiden mukaisesti Saltin asennusta macOS -käyttöjärjestelmälle, mutta asennus ei onnistunut. Teminaaliin tuli ilmoitus, että komentoa ei löydy. 
 ## b) Vagrant
 Kirjauduin Vagrantiin komennolla
 
