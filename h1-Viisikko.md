@@ -44,7 +44,7 @@ Jos sinulla ei ole Vagrantia asennettuna, voit asentaa sen [Vagrantin -sivuilta]
 2. Vie vagrant tiedosto tekemääsi hakemistoon
 
        $ cd h1
-       $ vagrant innit
+       $ vagrant init
    ![Näyttökuva 2024-3-28 kello 12 50 28](https://github.com/Lambizzzz/infra-as-code/assets/148875838/7879f82a-062f-4bdd-95a8-9e1747fa634d)
 3. luo vagrant box
 
