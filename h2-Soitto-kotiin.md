@@ -30,6 +30,36 @@ Kaikki toiminnot ja komennot tein koneen terminaalissa.
 
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/609eb8de-75cf-43d6-a23b-6262773a3c96)
 
+Skriptin koodi luo valmiiksi kaksi virtuaalikonetta samaan verkkoon, luo niille hakemistopolut ja asentaa niihin tree -ohjelman. Koneille luodaan myös omat isäntänimet ja yksityiset ip-osoitteet.
+
+| kone  |t001|t002|
+|---|----|----|
+|ip|192.168.88.101|192.168.88.102|
+
+4. Suoritin `$ vagrant up` -komennon, joka käynnisti luodun vagrant-ympäristön muutamassa minuutissa.
+5. Testasin, että molemmat koneet toimivat ja pystyn pingaamaan koneet toisiinsa. Pingaaminen on tapa, millä testataan kahden samassa verkossa olevan koneen välistä yhteyttä. Pingaamiseen käytetään toisen koneen ip-osoitetta.
+
+        $ vagrant ssh t001
+   
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/446008e6-078b-4179-a715-608f7fb42e5e)
+        
+        $ ping -c 1 192.168.88.102
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/c288d094-9e3e-4901-8d98-3ea3f16f6f3a)
+
+
+        $ exit
+        $ vagrant ssh t002
+        
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8a680632-d6c3-4eaa-ae10-d648622b3857)
+
+        $ ping -c 1 192.168.88.101
+
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/65070897-f569-479b-a1ad-880296a5400e)
+
+
+
+
+
 
 
 
