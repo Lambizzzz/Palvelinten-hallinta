@@ -96,18 +96,71 @@ Nyt tavoiteltu asetelma pitäisi olla luotuna. Testasin vielä, että yhteys toi
 
 > Kuva 7. Yhteys toimii.
 
-7. Testasin herra koneella antaa komentoja orja koneille.
-
-       $ sudo salt '*' cmd.run 'hostname -I'
+## Shell-komennon ajaminen orjalla verkon yli
+Shell-komennon voi antaa yhdelle, usealle tai kaikille koneille samanaikaisesti. 
+1. Testasin herra koneella antaa komentoja orja koneille.
+   
+          $ sudo salt '*' cmd.run 'hostname -I'
 Komento kysyy orja koneilta niiden ip-osoitteita.
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/926df7d6-c424-47c5-8537-160c064563cd)
 
 > Kuva 8. Molemmat orja koneet ilmoittavat ip-osoitteensa herralle.
 
+2. Testasin antaa vain yhdelle orja koneelle komennon
+
+          $ sudo salt 't001' cmd.run 'ls -la /home'
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/71fd1584-1f13-4dc0-a565-e2b43e3c2af9)
+
+> Kuva 9. t001 kone listaa hakemistot ja tiedostot home -hakemistosta.
+
+## Idempotentti (state.single) komentojen ajaminen verkon yli.
+Orja koneille voi myös antaa idempotentti komentoja, jossa kuvataan haluttu lopputulos ja muutoksia tehdää vain jos sille on tarvetta.
+
+1. Kokeilin antaa kaikille orja koneille komennon käyttäen pkg -tilafunktiota. Komento kuvaa lopputuloksen, jossa kaikilla orja koneilla on apache2 asennettuna. 
+
+          $ sudo salt '*' state.single pkg.installed apache2
+
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/32d1c373-20f4-4aa7-bae3-f9996527c092)
+
+> Kuva 10. Apache2 asennettiin t002 koneelle.
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/a3e90b9a-5498-4c4a-ba42-a53af9274e84)
+
+> Kuva 11. Apache2 asennettiin t001 koneelle.
+
+2. Testasin, että Apache2 on käynnissä.
+
+          $ sudo salt '*' state.single service.running apache2
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/59ad85c2-1f5f-43dc-bc83-91be4a8f87a9)
+
+> Kuva 12. Apache2 on käynnissä molemmilla orja koneilla.
+
+3. Kokeilin vielä file -tilafunktiota
+
+          $ sudo salt '*' state.single file.managed '/tmp/see-you-at-terokarvinen-com'
+   
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/991a4f32-6a18-4ddc-ba6f-a537cb243d08)
+
+> Kuva 13. Uusi tiedosto on luotu t001 koneelle.
+
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/223017f5-a0d1-4d5b-ad7c-b4d27d866781)
+
+> Kuva 14. Uusi tiedosto on luotu t002 koneelle.
+
+## e) Teknisten tietojen kerääminen orjista verkon yli (grains.item)
+1. Katsoin orjien tämän hetkisen hakemiston.
+
+         $ sudo salt '*' grains.item cwd
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/6b0b7125-fbb5-4869-a7a5-a61045c2ab17)
+
+> Kuva 15. Molemmat orjat ovat juuressa.
+2. Katsoin orjien käyttöjärjestelmät.
+
+        $ sudo salt '*' grains.item os
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/c65de15a-caa7-4ce2-8333-543d3424daa9)
+
+> Kuva 16. Molemmissa orja koneissa on Debian käyttöjärjestelmä.
+
+## Infraa koodina
 
 
-
-
-- Luo orjalla tekstitiedosto, mihin kirjoitat herran ip-osoitteen
-  
-![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/d31fdece-bab7-4172-ac42-0364c8cd1bea)
+ 
