@@ -28,7 +28,9 @@ Kaikki toiminnot ja komennot tein koneen terminaalissa.
        $ nano Vagrantfile
 3. Lisäsin tekstitiedostoon Tero Karvisen valmiin [skriptin](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/#vagrantfile).
 
-![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/609eb8de-75cf-43d6-a23b-6262773a3c96)
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/609eb8de-75cf-43d6-a23b-6262773a3c96)
+
+> Kuva 1. Skripti liitettynä nanolla luotuun tekstitiedostoon nimeltä Vagranfile.
 
 Skriptin koodi luo valmiiksi kaksi virtuaalikonetta samaan verkkoon, luo niille hakemistopolut ja asentaa niihin tree -ohjelman. Koneille luodaan myös omat isäntänimet ja yksityiset ip-osoitteet.
 
@@ -41,20 +43,27 @@ Skriptin koodi luo valmiiksi kaksi virtuaalikonetta samaan verkkoon, luo niille 
 
         $ vagrant ssh t001
    
-![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/446008e6-078b-4179-a715-608f7fb42e5e)
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/446008e6-078b-4179-a715-608f7fb42e5e)
+
+> Kuva 2. Kirjautuminen t001 koneelle toimii.
         
         $ ping -c 1 192.168.88.102
-![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/c288d094-9e3e-4901-8d98-3ea3f16f6f3a)
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/c288d094-9e3e-4901-8d98-3ea3f16f6f3a)
 
+> Kuva 3. t001 koneelta saa onnistuneesti otettua yhteyttä t002 koneeseen.
 
         $ exit
         $ vagrant ssh t002
         
-![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8a680632-d6c3-4eaa-ae10-d648622b3857)
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8a680632-d6c3-4eaa-ae10-d648622b3857)
+
+> Kuva 4. Kirjautuminen t002 koneelle toimii.
 
         $ ping -c 1 192.168.88.101
 
-![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/65070897-f569-479b-a1ad-880296a5400e)
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/65070897-f569-479b-a1ad-880296a5400e)
+
+> Kuva 5. t002 koneelta saa onnistuneesti otettua yhteyttä t001 koneeseen.
 
 ## b) Herra-orja arkkitehtuuri verkon yli
 Tavoitteena on luoda asetelma, jossa herra ja orja ovat eri virtuaalikoneilla. Herra antaa komentoja orjalle verkon yli ja orja pystyy vastaamaan niihin. Loin asetelman Karvisen ([2023](https://terokarvinen.com/2023/salt-vagrant/)) ohjeen mukaan. Tämän ohjeen mukaisesti luotu asetelma tulee sisältämään yhden herran ja kaksi orjaa. Ohjeesta poiketen käytin nano -tekstieditoria micron sijasta. Käytin tehtävään Vagrantia. 
@@ -74,10 +83,26 @@ Tavoitteena on luoda asetelma, jossa herra ja orja ovat eri virtuaalikoneilla. H
    
        $ vagrant ssh tmaster
        $ sudo salt-key -A
-![Näyttökuva 2024-4-6 kello 11 20 04](https://github.com/Lambizzzz/infra-as-code/assets/148875838/ee478200-270d-4bdc-b6b1-3a884bda1ea2)
+### ![Näyttökuva 2024-4-6 kello 11 20 04](https://github.com/Lambizzzz/infra-as-code/assets/148875838/ee478200-270d-4bdc-b6b1-3a884bda1ea2)
 
+> Kuva 6. Avaimet ovat hyväksytty.
 
+Nyt tavoiteltu asetelma pitäisi olla luotuna. Testasin vielä, että yhteys toimii.
 
+6. Otin herra koneella yhteyttä orja koneisiin Saltin luoman suojatun kanavan kautta.
+
+       $ sudo salt '*' test.ping
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/608a4014-80c2-4cf2-924a-75c98d75b3dd)
+
+> Kuva 7. Yhteys toimii.
+
+7. Testasin herra koneella antaa komentoja orja koneille.
+
+       $ sudo salt '*' cmd.run 'hostname -I'
+Komento kysyy orja koneilta niiden ip-osoitteita.
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/926df7d6-c424-47c5-8537-160c064563cd)
+
+> Kuva 8. Molemmat orja koneet ilmoittavat ip-osoitteensa herralle.
 
 
 
