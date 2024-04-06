@@ -56,7 +56,25 @@ Skriptin koodi luo valmiiksi kaksi virtuaalikonetta samaan verkkoon, luo niille 
 
 ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/65070897-f569-479b-a1ad-880296a5400e)
 
+## b) Herra-orja arkkitehtuuri verkon yli
+Tavoitteena on luoda asetelma, jossa herra ja orja ovat eri virtuaalikoneilla. Herra antaa komentoja orjalle verkon yli ja orja pystyy vastaamaan niihin. Loin asetelman Karvisen ([2023](https://terokarvinen.com/2023/salt-vagrant/)) ohjeen mukaan. Tämän ohjeen mukaisesti luotu asetelma tulee sisältämään yhden herran ja kaksi orjaa. Ohjeesta poiketen käytin nano -tekstieditoria micron sijasta. Käytin tehtävään Vagrantia. 
+1. Loin uuden hakemiston ja loin sinne tekstitiedoston nanolla.
 
+       $ mkdir saltdemo; cd saltdemo
+       $ nano Vagrantfile   
+2. Kopioin Karvisen ohjeesta [skriptin](https://terokarvinen.com/2023/salt-vagrant/#ready-made-vagrantfile-for-three-computers) ja liitin sen tektitiedostoon. Skripti luo valmiiksi kolme virtuaalikonetta, yhden herran ja kaksi orjaa. Kaikilla luoduilla virtuaalikoneilla on omat nimet ja ip-osoitteet.
+   
+|Kone|tmaster|t001|t002|
+|---|-------|----|----|
+|ip|192.168.12.3|192.168.12.100|192.168.12.102|
+|rooli|herra|orja|orja|
+
+4. Suoritin `$ vagrant up` -komennon, joka käynnisti luodun vagrant-ympäristön noin viidessä minuutissa.
+5. Jotta herran ja orjien välinen yhteys toimii, on kirjaututtava herra -koneeseen ja hyväksyttävä orjien lähettämät avaimet.
+   
+       $ vagrant ssh tmaster
+       $ sudo salt-key -A
+![Näyttökuva 2024-4-6 kello 11 20 04](https://github.com/Lambizzzz/infra-as-code/assets/148875838/ee478200-270d-4bdc-b6b1-3a884bda1ea2)
 
 
 
