@@ -161,6 +161,21 @@ Orja koneille voi myös antaa idempotentti komentoja, jossa kuvataan haluttu lop
 > Kuva 16. Molemmissa orja koneissa on Debian käyttöjärjestelmä.
 
 ## Infraa koodina
+1. Loin uuden hakemistopolun ja menin polun viimeiseen hakemistoon.
+   
+        $ sudo mkdir -p /srv/salt/hello/
+        $ cd /srv/salt/hello/
 
+3. Avasin tekstieditorilla tekstitiedoston nimeltä init.sls ja kirjoitin sinne idempotentti koodia.
+
+        $ sudoedit init.sls
+
+       
+         /tmp/hellotero:
+          file.managed
+4. Suoritin komennon
+
+        $ sudo salt-call --local state.apply hello
 
  
+![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/3b29d5ff-7dd4-4d00-9127-e53c64131599)
