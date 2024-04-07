@@ -17,7 +17,7 @@
 - Luo kansio, johon luot tekstitiedostoon koodia
 - Suorita koodi
 
-## Kaksi virtuaalikonetta samassa verkossa
+## a) Kaksi virtuaalikonetta samassa verkossa
 Loin kahden koneen virtuaaliverkon Vagrantin avulla. Jos Vagrantia ei ole asennettuna, ohjeet siihen löytyy Vagrantin [sivuilta](https://developer.hashicorp.com/vagrant/install).
 Kaikki toiminnot ja komennot tein koneen terminaalissa.
 1. Loin uuden hakemiston ja menin siihen hakemistoon.
@@ -96,7 +96,7 @@ Nyt tavoiteltu asetelma pitäisi olla luotuna. Testasin vielä, että yhteys toi
 
 > Kuva 7. Yhteys toimii.
 
-## Shell-komennon ajaminen orjalla verkon yli
+## c) Shell-komennon ajaminen orjalla verkon yli
 Shell-komennon voi antaa yhdelle, usealle tai kaikille koneille samanaikaisesti. 
 1. Testasin herra koneella antaa komentoja orja koneille.
    
@@ -113,7 +113,7 @@ Komento kysyy orja koneilta niiden ip-osoitteita.
 
 > Kuva 9. t001 kone listaa hakemistot ja tiedostot home -hakemistosta.
 
-## Idempotentti (state.single) komentojen ajaminen verkon yli.
+## d) Idempotentti (state.single) komentojen ajaminen verkon yli.
 Orja koneille voi myös antaa idempotentti komentoja, jossa kuvataan haluttu lopputulos ja muutoksia tehdää vain jos sille on tarvetta.
 
 1. Kokeilin antaa kaikille orja koneille komennon käyttäen pkg -tilafunktiota. Komento kuvaa lopputuloksen, jossa kaikilla orja koneilla on apache2 asennettuna. 
@@ -160,7 +160,7 @@ Orja koneille voi myös antaa idempotentti komentoja, jossa kuvataan haluttu lop
 
 > Kuva 16. Molemmissa orja koneissa on Debian käyttöjärjestelmä.
 
-## Infraa koodina
+## f) Infraa koodina
 Seurasin Karvisen (2024) [ohjetta](https://terokarvinen.com/2024/hello-salt-infra-as-code/). 
 1. Loin uuden hakemistopolun ja menin polun viimeiseen hakemistoon.
    
