@@ -1,5 +1,7 @@
 # Oppitunninmuistiinpanot
-## 9.4
+## 9.4 
+Ohjeet katsottu Karvisen (2016) [ohjeista](https://terokarvinen.com/2016/publish-your-project-with-github/?fromSearch=github) ja tunnilla opituista asioista. 
+
 Asensin gitin Linuxin virtuaalikoneelle ja omalle mac -tietokoneelle.
 1. asenna git
 
