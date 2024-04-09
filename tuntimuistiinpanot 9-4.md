@@ -1,5 +1,6 @@
 # Oppitunninmuistiinpanot
 ## 9.4
+Asensin gitin Linuxin virtuaalikoneelle ja omalle mac -tietokoneelle.
 1. asenna git
 
        $ sudo apt-get -y install git
