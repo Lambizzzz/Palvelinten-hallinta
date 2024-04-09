@@ -12,7 +12,7 @@ Asensin gitin Linuxin virtuaalikoneelle ja omalle mac -tietokoneelle.
 
        $ ssh key-gen                      #Linux komento
        $ ssh-keygen                       #Mac komento 
-5. kopioi julkinen avain /home/vagrant/.ssh/id_rsa.pub -hakemistosta ja kopioi se githubiin. Github - asetukset - ssh key - add new key.
+5. kopioi julkinen avain /home/vagrant/.ssh/id_rsa.pub -hakemistosta ja kopioi se githubiin. Github - asetukset - ssh key - add new key. Mac -koneella /Users/mirellasiponen/.ssh/id_rsa.pub -hakemisto.
       
        $ cat id_rsa.pub
 6. Kopioi Githubista kurssin reposition ssh linkki
