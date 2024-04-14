@@ -54,4 +54,36 @@ Nyt muutokset ovat valmiit ja ne pitäisivät olla näkyvissä webbipalvelimessa
 
 ## Doh!
 Tein turhan muutokset gittiin ja en tallentanut niitä. Tuhosin muutokset  ‘git reset --hard’ -komennolla.
+1. Loin uuden tiedoston.
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/8f7ffa99-802c-460c-b066-9bc6a7ba45ec)
 
+> Kuva 9. Uusi luotu tiedosto.
+2. Ideksoin uuden tiedoston ja tarkistin nykyisen työskentelytilan vaiheen.
+
+    $ git add opiskele.md
+    $ git status
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/4562a082-819b-43dd-bc58-3e7b58f40d33)
+
+> Kuva 10. Tiedosto lisätty.
+3. Tuhosin muutokset ja tarkistin, että muutokset oli tuhoutuneet.
+
+    $ git reset --hard
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/362715f6-a868-4e41-b380-b3a4a4ee4bc4)
+
+> Kuva 11. Turhat muutokset ovat tuhottu.
+
+Edellä tehdyt turhat muutokset saatiin helpolla tavalla tuhottua, mutta tuhottuja muutoksia ei saa enään peruutettua.
+
+## Tukki
+Tarkastelin varastoni lokia. Lokeista voin nähdä tehnyt muutokset, niiden ajankohdat, tekijät ja commmit -viestin.
+
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/14c9f3cd-cada-4482-ba14-0c1811ee284f)
+
+> Kuva 12. Lokissa näkyy kaksi muutosta.
+
+Lokin mukaan varastoon on tehty vain kaksi muutosta, varaston luominen ja tiedoston lisääminen. Tiedosto, jonka loin ja tuhosin ei näy lokissa ollenkaan. 
+
+Olen aikaisemmin lisännyt nimeni ja sähköpostin gittiin käyttämällä alla olevia komentoja. Ne näkyvät lokissa.
+
+    $ git config --global user.email "<sähköposti>"
+    $ git config --global user.name "<nimi>"
