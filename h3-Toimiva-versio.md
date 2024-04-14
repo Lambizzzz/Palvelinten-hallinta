@@ -112,7 +112,43 @@ Ajoin Salt-tiloja varatossani.
 
 > Kuva 14. Salt tilan tallennus init.sls -kansioon.
 
+3. Suoritin alla olevan komennon.
 
+       $  sudo salt-call --local --file-root srv/salt/ state.apply hello
+
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/84e95547-ded8-4b50-bff2-7800e32a642d)
+> Kuva 15. Virheilmoitus komennon jälkeen.
+Yritin noin tunnin ajan selvitellä ongelmaa kokeilemalla ja tarkistamalla eri asioita, mutta en päässyt tästä eteenpäin.
+
+
+## Vapaaehtoinen
+Aikaisemmat tehtävät olin tehnyt Mac koneella, nyt kokeilinkin Gittiä Debianilla. Minulla oli jo Debian virtuaalikone käytettävissä, johon asensin gitin. 
+1. Asensin gitin
+
+       $ sudo apt-get -y install git
+2. Loin ssh-avaimet. Git luo avaimet ja kertoo hakemiston mihin laittoi kopioitavan julkisen avaimen.
+
+       $ ssh key-gen
+3. Kopioi julkinen avain ja liitä se githubiin 'New SSH key' -kohtaan.
+4. Kopioi Githubista kurssin reposition ssh url
+
+       $ git clone <ssh-url>
+
+Kaikki gitin toiminnot ovat samat Mac ja Debian koneilla.
+
+5. Tein uuden tiedoston
+
+       $ micro Opiskele.md
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/e2ac8732-0beb-4fe3-b4d0-bead0c17327d)
+
+> Kuva 16. Lisäsin tiedostoon siältöä.
+
+6. Ajoin komennon `git add . && git commit && git pull && git push`. Muutokset päivittyivät webbipalvelimeen.
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/b53d864b-dd47-4ccb-bfd7-b76a9aeefba4)
+
+> Kuva 17. Muutokset näkyvät webbipalvelimessa.
+
+   
 ## Lähteet
 https://git-scm.com/docs/git-add
 
