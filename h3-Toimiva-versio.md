@@ -23,7 +23,7 @@ Kloonaa juuri tehty varasto itsellesi, tee muutoksia ja puske palvelimelle, jott
 > Kuva 2. 
 2. Kloonasin varaston. Terminaalissa kloonaus suoritetaan alla olevalla komennolla, jonka perään laitetaan varaston yksilöllinen ssh-url.
 
-    $ git clone <ssh-url>
+        $ git clone <ssh-url>
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/66f6162d-8d89-4cb9-8ac3-310f16c65c68)
 
 > Kuva 3. Varaston kloonaus onnistui
@@ -32,7 +32,7 @@ Kloonaa juuri tehty varasto itsellesi, tee muutoksia ja puske palvelimelle, jott
 > Kuva 4. Varastossa ei vielä ole muita tiedostoja kuin README.md ja lisenssi.
 3. Loin varastoon uuden tekstitiedoston. Lisäsin siihen markdownin.
 
-    $ micro Mee-töihin.md
+        $ micro Mee-töihin.md
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/d1eca7cc-f2c1-4758-b5f0-262be6f75b57)
 
 > Kuva 5. Microlla tehty tekstitiedosto, johon lisäsin sisältöä
@@ -40,7 +40,7 @@ Jotta muutokset tulevat näkyviin webbipalvelimeen, on käytettävä komentoa, j
 
 4. Selitin tehdyt muutokset engalnniksi käskymuodossa.
 
-    $ git add . && git commit; git pull && git push
+        $ git add . && git commit; git pull && git push
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/6781f1e6-e663-40b0-948c-505d8a322525)
 
 > Kuva 6. Lisäsin tekstin "Add new file" ja tallensin tiedoston.
@@ -60,15 +60,15 @@ Tein turhan muutokset gittiin ja en tallentanut niitä. Tuhosin muutokset  ‘gi
 > Kuva 9. Uusi luotu tiedosto.
 2. Ideksoin uuden tiedoston ja tarkistin nykyisen työskentelytilan vaiheen.
 
-    $ git add opiskele.md
-    $ git status
+        $ git add opiskele.md
+        $ git status
     
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/4562a082-819b-43dd-bc58-3e7b58f40d33)
 
 > Kuva 10. Tiedosto lisätty.
 3. Tuhosin muutokset ja tarkistin, että muutokset oli tuhoutuneet.
 
-    $ git reset --hard
+        $ git reset --hard
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/362715f6-a868-4e41-b380-b3a4a4ee4bc4)
 
 > Kuva 11. Turhat muutokset ovat tuhottu.
@@ -89,8 +89,8 @@ Lokin mukaan varastoon on tehty vain kaksi muutosta, varaston luominen ja tiedos
 
 Olen aikaisemmin lisännyt nimeni ja sähköpostin gittiin käyttämällä alla olevia komentoja. Ne näkyvät lokissa.
 
-    $ git config --global user.email "<sähköposti>"
-    $ git config --global user.name "<nimi>"
+        $ git config --global user.email "<sähköposti>"
+        $ git config --global user.name "<nimi>"
 
 ## Suolattu rakki
 
