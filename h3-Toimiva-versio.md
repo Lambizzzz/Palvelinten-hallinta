@@ -2,15 +2,25 @@
 ## x) lue ja tiivistä
 ### What is Git? ([Chacon and Straub 2014](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F))
 
-### 'git add . && git commit; git pull && git push'
+- Git näkee datansa sarjana kuvakaappauksia miniatyyri-tiedostojärjestelmästä.
+- Suurin osa Gitin toiminnoista tapahtuu paikallisesti ilman verkkoyhteyttä.
+- Git varmistaa tietojen eheyden tarkistussummien avulla.
+- Gitin perusprosessi koostuu kolmesta tilasta: modified, staged ja committed
+   
+### 'git add . && git commit; git pull && git push' 
+- Git add . - komento päivittää indeksin työpuun nykyisellä sisällöllä ([Git 2024](https://git-scm.com/docs/git-add)).
+- Git commit -komento tallentaa tehdyt muutokset, niiden tekijät, ajankohdan ja commit viestin ([Git 2024](https://git-scm.com/docs/git-commit)).
+- Git pull -komento hakee muutokset etävarastosta nykyiseen paikalliseen versioon ([Git 2024](https://git-scm.com/docs/git-pull)).
+- Git push -komento päivittää tehdyt muutokset ([Git 2024](https://git-scm.com/docs/git-push)).
+ 
 
 ### Varaston loki
+- Varaston [terokarvinen/suolax/](https://github.com/terokarvinen/suolax/) lokissa näkyy 8 muutosta
+- Kaikki muutokset ovat tehnyt Tero Karvinen 10.4
 
 ## a) Online
 Loin uuden varaston GitHubiin. Lisäsin varastoon README.md ja GNU General Public License 3 -tiedostot.
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/4b871267-46a4-438d-a01b-238a9123a4dd)
-
-
 
 > Kuva 1. Uuden varaston luomisnäkymä.
 
@@ -93,4 +103,27 @@ Olen aikaisemmin lisännyt nimeni ja sähköpostin gittiin käyttämällä alla 
         $ git config --global user.name "<nimi>"
 
 ## Suolattu rakki
+Ajoin Salt-tiloja varatossani.
+1. Loin hakemiston srv/salt/hello, johon tein init.sls -nimisen tiedoston
+
+       $ micro init.sls
+2. Tallensin init.sls -tiedostoon:
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/3f62691d-6b5f-4eeb-9b3d-dd9ff0a99500)
+
+> Kuva 14. Salt tilan tallennus init.sls -kansioon.
+
+
+## Lähteet
+https://git-scm.com/docs/git-add
+
+https://git-scm.com/docs/git-commit
+
+https://git-scm.com/docs/git-pull
+
+https://git-scm.com/docs/git-push
+
+https://terokarvinen.com/2024/configuration-management-2024-spring/
+
+
+
 
