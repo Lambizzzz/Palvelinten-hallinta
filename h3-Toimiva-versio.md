@@ -62,6 +62,7 @@ Tein turhan muutokset gittiin ja en tallentanut niitä. Tuhosin muutokset  ‘gi
 
     $ git add opiskele.md
     $ git status
+    
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/4562a082-819b-43dd-bc58-3e7b58f40d33)
 
 > Kuva 10. Tiedosto lisätty.
@@ -82,8 +83,14 @@ Tarkastelin varastoni lokia. Lokeista voin nähdä tehnyt muutokset, niiden ajan
 > Kuva 12. Lokissa näkyy kaksi muutosta.
 
 Lokin mukaan varastoon on tehty vain kaksi muutosta, varaston luominen ja tiedoston lisääminen. Tiedosto, jonka loin ja tuhosin ei näy lokissa ollenkaan. 
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/21929631-903d-4eb8-9f61-969920db11b8)
+
+> Kuva 13. Tiedostoon tehnyt muutokset näkyvät myös webbipalvelimessa.
 
 Olen aikaisemmin lisännyt nimeni ja sähköpostin gittiin käyttämällä alla olevia komentoja. Ne näkyvät lokissa.
 
     $ git config --global user.email "<sähköposti>"
     $ git config --global user.name "<nimi>"
+
+## Suolattu rakki
+
