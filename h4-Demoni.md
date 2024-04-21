@@ -1,9 +1,9 @@
 # Neljäs harjoitus, Demoni
 ## x) Lue ja tiivistä
 ## a) Hello SLS
-Tein Hei maailma -tilan kirjoittamalla se tekstitiedostoon /srv/salt/hello/init.sls. Tehtävässä käytin apuna Karvisen -[ohjetta](https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file) (2023).
+Tein Hei maailma -tilan kirjoittamalla se tekstitiedostoon /srv/salt/hello/init.sls. Tehtävässä käytin apuna Karvisen [ohjetta](https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file) (2023).
 1. Loin uuden hakemisto polun `srv/salt/hello` ja siirryin sinne.
-2. Loin hello -hakemistoon init.sls ja hellomirella.txt -tekstitedostot Karvisen -[ohjeiden](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh) (2018) mukaan.
+2. Loin hello -hakemistoon init.sls ja hellomirella.txt -tekstitedostot Karvisen [ohjeiden](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh) (2018) mukaan.
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/240874dc-0f85-4778-be32-4e590963652d)
 
 > Kuva 1. init.sls ja hellomirella.txt -tekstitiedotojen sisällöt.
@@ -77,6 +77,16 @@ Tässä tehtävässä käytin tunnilla tehtyä skriptiä.
 
 > Kuvat 12 & 13. Virhekoodit.
 
-
 ## d) SSHouto
+1. Loin `/srv/salt/` -hakemistoon `sshd.sls` -tekstitiedoston Karvisen [ohjeiden](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh) mukaan.
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/52016cd8-3928-48bc-8be3-d0d6082c7a57)
+
+> Kuva 14. sshd.sls -tiedoston sisältö.
+
+2. Lisäsin samaan hakemistoon vielä `sshd.config` -tiedoston skriptin mukaisesti.
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/501b3675-8c13-4add-8ffe-d67c08f7f289)
+
+> Kuva 15. sshd.config sisältö.
+
+
 ## Lähteet
