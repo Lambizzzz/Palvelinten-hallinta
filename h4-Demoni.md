@@ -1,6 +1,7 @@
 # Neljäs harjoitus, Demoni
 ## x) Lue ja tiivistä
 ## a) Hello SLS
+Tehtävässä käytin Karvisen -[ohjetta](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh)(2018).
 1. Loin uuden hakemisto polun `srv/salt/hello` ja siirryin sinne.
 2. Loin hello -hakemistoon init.sls ja hellomirella.txt -tekstitedostot.
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/240874dc-0f85-4778-be32-4e590963652d)
