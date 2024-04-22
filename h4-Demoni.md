@@ -1,5 +1,18 @@
 # Neljäs harjoitus, Demoni
 ## x) Lue ja tiivistä
+### Infra as Code - Your wishes as a text file & top.sls - What Slave Runs What States ([Karvinen 2023](https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file))
+- Infraa koodina: init.sls tekstitiedostoon lisätään tilafunktio ja ajetaan salt komento kaikille orjille.
+- Komentojen jakaminen orjien oikeuksien mukaan: top.sls tiedostoon lisätään ketkä orjat vastaavat mihinkin komentoihin. Salt komento voidaan ajaa ilman moduulin nimeä. 
+
+###  YAML ([saltstack](https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml))
+- Saltissa käytettävä merkintäkieli
+- kolme tukipilaria: Scalars, listat ja sanakirjat
+
+### Pkg-File-Service - Control Daemons with Salt - Change SSH Server port ([Karvinen 2018](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh))
+- useampien daemonien yhtäaikainen ohjaus
+-  sshd.sls tiedostoon lisätään tila ja konfikurointitiedostoon muokataan SSH palvelin portti
+- ajetaan salt komento ’sudo salt '*' state.apply sshd’
+
 ## a) Hello SLS
 Tein Hei maailma -tilan kirjoittamalla se tekstitiedostoon /srv/salt/hello/init.sls. Tehtävässä käytin apuna Karvisen [ohjetta](https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file) (2023).
 1. Loin uuden hakemisto polun `srv/salt/hello` ja siirryin sinne.
@@ -90,3 +103,8 @@ Tässä tehtävässä käytin tunnilla tehtyä skriptiä.
 
 
 ## Lähteet
+
+https://terokarvinen.com/2018/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/?fromSearch=virtual%20host
+https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh
+https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file
+https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml
