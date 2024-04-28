@@ -1,5 +1,10 @@
 # Viides harjoitus, Tekniikoita
 ## x) Lue ja tiivistä
+### Using Salt with Windows - Tuomas Valkamo ([2022](https://tuomasvalkamo.com/CMS-course/week-5/))
+- Luo uusi tekstitiedosto
+- Kerää tietoja koneesta ja kirjoita ne luotuun tekstitiedostoon
+- Tarkista onko TCP portti auki
+  
 ## a) Asenna Salt Macille
 Minulla oli jo Salt asennettuna Mac-konelleni, joten testasin Saltin toimivuutta alla olevalla komennolla.
 
