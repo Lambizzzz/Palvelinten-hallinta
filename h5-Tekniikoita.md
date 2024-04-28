@@ -33,6 +33,9 @@ Keräsin keskeisiä ja mielenkiintoisia tietoja koneestani grains.items -toiminn
 > Kuva 5. Tämänhetkinen hakemistoni.
 
 ## c) Kokeile Saltin file -toimintoa Macilla
+1. Loin uuden tekstitiedoston 
+
+       $ salt-call --local state.single file.managed C:/tmp/hello.txt
 
 ## d) CSI Kerava
 Katsoin viimeisimmäksi muokatut tiedostot koneeltani find -toimintoa käyttäen. Tehtävässä käytin apuna Karvisen [ohjeita](https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/)(2018). 
