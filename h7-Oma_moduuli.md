@@ -1,0 +1,1 @@
+# Seitsemäs harjoitus, oma moduuli
