@@ -40,3 +40,7 @@ Aloitan moduulin tekemisen asentamalla Homebrew paketinhallintajärjestelmän. H
 > Kuva 2. Tmux näyttää kahta istuntoa vierekkäin.
 
 Lisää tmuxin näppäinoikotie ohjeita löytyy esimerkiksi [githubista](https://gist.github.com/michaellihs/b6d46fa460fa5e429ea7ee5ff8794b96#shortcuts) (2016). Itse koin haasteita näppäinoikoteitä käyttäessä ja luulin ettei ne toimineet minulla. Pitkään kokeiltuani ja netistä tietoa etsiessäni löysin vastauksen ongelmaani. Olin painanut `ctrl`, `b` ja `%` näppäimiä kaikkia saman aikaisesti. Täytyykin huomioida, että `ctrl` ja `b` näppäimiä painetaan eka yhdessä, vapautetaan ne ja painetaan `%` näppäintä erikseen. 
+
+## Herra kone
+
+Suunnitelmani oli tehdä mac koneesta herra kone. 
