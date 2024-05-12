@@ -45,5 +45,12 @@ Aloitan moduulin tekemisen asentamalla Homebrew paketinhallintajärjestelmän. H
 Lisää tmuxin näppäinoikotie ohjeita löytyy esimerkiksi [githubista](https://gist.github.com/michaellihs/b6d46fa460fa5e429ea7ee5ff8794b96#shortcuts) (2016). Itse koin haasteita näppäinoikoteitä käyttäessä ja luulin ettei ne toimineet minulla. Pitkään kokeiltuani ja netistä tietoa etsiessäni löysin vastauksen ongelmaani. Olin painanut `ctrl`, `b` ja `%` näppäimiä kaikkia saman aikaisesti. Täytyykin huomioida, että `ctrl` ja `b` näppäimiä painetaan eka yhdessä, vapautetaan ne ja painetaan `%` näppäintä erikseen. 
 
 ## Herra kone
+Suunnitelmani oli tehdä mac koneesta herra kone, jolla voi antaa määräyksiä orja koneille. Asensin koneelleni Saltin, ohjelmiston omien [nettisivujen tarjoamien ohjeiden](https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html#macos) mukaan.
 
-Suunnitelmani oli tehdä mac koneesta herra kone. 
+1. Tarkistin asennuksen onnistumisen
+
+       $ sudo salt-call --version
+
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/d6735053-cf77-47d6-9886-21c07df019c4)
+
+> Kuva 3. Saltin asennus onnistui.
