@@ -17,5 +17,10 @@ Tiivistelmä miten päästään lopputulokseen
 
 ### Asennetut paketit:
 - Homebrew: Paketinhallinta Macille, jolla voi asentaa, päivittää ja hallita erilaisia ​​sovelluksia ja työkaluja.
-- Tmux
+- Tmux?
 
+## Homebrew
+Aloitan moduulin tekemisen asentamalla Homebrew paketinhallintajärjestelmän. Homebrew sisältää tarpeellisia paketteja ja kehitystytyökaluja, joita macOS koneista puuttuu. Asensin Homebrew:n [nettisivun ohjeiden mukaisesti](https://brew.sh). 
+1. Kopioin nettisivuilta homebrew asennus komennon ja liitin sen macOS terminaaliin.
+
+       $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
