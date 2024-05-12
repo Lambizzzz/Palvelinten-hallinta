@@ -8,6 +8,7 @@
 #### [H6 Benchmark](https://github.com/Lambizzzz/infra-as-code/blob/main/h6-Benchmark.md)
 
 ## Kuvaus projektista
+Oman moduulin tavoitteena on luoda herra-orja arkkitehtuuri, jossa herra kone on oma koneeni ja kaksi orjaa ovat virtuaalikoneita. 
 Työn lopputulos ja hyödyt,
 Tiivistelmä miten päästään lopputulokseen
 
