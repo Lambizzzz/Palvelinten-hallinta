@@ -17,10 +17,27 @@ Tiivistelmä miten päästään lopputulokseen
 
 ### Asennetut paketit:
 - Homebrew: Paketinhallinta Macille, jolla voi asentaa, päivittää ja hallita erilaisia ​​sovelluksia ja työkaluja.
-- Tmux?
+- Tmux: multiplekseri, jolla voi hallita usempaa terminaalia samassa ikkunassa.
 
-## Homebrew
+## Homebrew ja Tmux
 Aloitan moduulin tekemisen asentamalla Homebrew paketinhallintajärjestelmän. Homebrew sisältää tarpeellisia paketteja ja kehitystytyökaluja, joita macOS koneista puuttuu. Asensin Homebrew:n [nettisivun ohjeiden mukaisesti](https://brew.sh). 
 1. Kopioin nettisivuilta homebrew asennus komennon ja liitin sen macOS terminaaliin.
 
        $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. Testasin homebrewin asennusta asentamalla sen avulla Tmux paketin. Komennolla homebrew aluksi tarkistaa tarviiko paketinhallintajärjestelmää päivittää ja suorittaa tarvittavat päivitykset. Sen jälkeen haluttu paketti asennetaan.
+
+       $ brew install tmux
+
+### ![Näyttökuva 2024-5-12 kello 13 45 22](https://github.com/Lambizzzz/infra-as-code/assets/148875838/369e6dd4-e489-4f1f-800e-577095050a1a)
+
+> Kuva 1. Tmux asennus onnistui brew:lla.
+
+
+
+### ![Näyttökuva 2024-5-12 kello 17 42 30](https://github.com/Lambizzzz/infra-as-code/assets/148875838/b085fc50-67ad-4652-89e3-3de24d529779)
+
+> Kuva 2. 
+
+Lisää tmuxin näppäinoikotie ohjeita löytyy [githubista](https://gist.github.com/michaellihs/b6d46fa460fa5e429ea7ee5ff8794b96#shortcuts) (2016). 
+
