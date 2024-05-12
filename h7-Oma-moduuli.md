@@ -6,14 +6,17 @@
 #### [H4 Demoni](https://github.com/Lambizzzz/infra-as-code/blob/main/h4-Demoni.md)
 #### [H5 Tekniikoita](https://github.com/Lambizzzz/infra-as-code/blob/main/h5-Tekniikoita.md)
 #### [H6 Benchmark](https://github.com/Lambizzzz/infra-as-code/blob/main/h6-Benchmark.md)
-## Yleistä
+
+## Kuvaus projektista
+Työn lopputulos ja hyödyt,
+Tiivistelmä miten päästään lopputulokseen
+
 ### Työskentely-ympäristö
 Host koneen tiedot:
 - OS: MacOS Monterey versio 12.6.6
 
-## Kuvaus projektista
-Työn lopputulos ja hyödyt
-Tiivistelmä miten päästään lopputulokseen
+Virtuaalikoneet:
+- OS Ubuntu 
 
 ### Asennetut paketit:
 - Homebrew: Paketinhallinta Macille, jolla voi asentaa, päivittää ja hallita erilaisia ​​sovelluksia ja työkaluja.
