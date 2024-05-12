@@ -1,6 +1,6 @@
 # Seitsemäs harjoitus, oma moduuli
 ## Palvelinten hallinta kurssin edelliset tehtävät
-#### [H1 Viisikko]()
+#### [H1 Viisikko](https://github.com/Lambizzzz/infra-as-code/blob/main/h1-Viisikko.md)
 #### [H2 Soitto Kotiin]()
 #### [H3 Toimiva versio]()
 #### [H4 Demoni]()
