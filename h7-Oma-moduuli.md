@@ -5,7 +5,7 @@
 #### [H3 Toimiva versio](https://github.com/Lambizzzz/infra-as-code/blob/main/h3-Toimiva-versio.md)
 #### [H4 Demoni](https://github.com/Lambizzzz/infra-as-code/blob/main/h4-Demoni.md)
 #### [H5 Tekniikoita](https://github.com/Lambizzzz/infra-as-code/blob/main/h5-Tekniikoita.md)
-#### [H6 Benchmark]()
+#### [H6 Benchmark](https://github.com/Lambizzzz/infra-as-code/blob/main/h6-Benchmark.md)
 ## Yleistä
 ### Työskentely-ympäristö
 Host koneen tiedot:
