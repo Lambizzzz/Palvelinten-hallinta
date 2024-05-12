@@ -33,11 +33,10 @@ Aloitan moduulin tekemisen asentamalla Homebrew paketinhallintajärjestelmän. H
 
 > Kuva 1. Tmux asennus onnistui brew:lla.
 
-
+3. Käynnistin tmuxin komennolla `tmux`, joka avasi uuden istunnon. Kokeilin tmuxia painamalla `ctrl+b` ja `%`, joka jakaa ikkunan pytysuorassa ja lisää uuden istunnon edellisen istunnon viereen.
 
 ### ![Näyttökuva 2024-5-12 kello 17 42 30](https://github.com/Lambizzzz/infra-as-code/assets/148875838/b085fc50-67ad-4652-89e3-3de24d529779)
 
-> Kuva 2. 
+> Kuva 2. Tmux näyttää kahta istuntoa vierekkäin.
 
-Lisää tmuxin näppäinoikotie ohjeita löytyy [githubista](https://gist.github.com/michaellihs/b6d46fa460fa5e429ea7ee5ff8794b96#shortcuts) (2016). 
-
+Lisää tmuxin näppäinoikotie ohjeita löytyy esimerkiksi [githubista](https://gist.github.com/michaellihs/b6d46fa460fa5e429ea7ee5ff8794b96#shortcuts) (2016). Itse koin haasteita näppäinoikoteitä käyttäessä ja luulin ettei ne toimineet minulla. Pitkään kokeiltuani ja netistä tietoa etsiessäni löysin vastauksen ongelmaani. Olin painanut `ctrl`, `b` ja `%` näppäimiä kaikkia saman aikaisesti. Täytyykin huomioida, että `ctrl` ja `b` näppäimiä painetaan eka yhdessä, vapautetaan ne ja painetaan `%` näppäintä erikseen. 
