@@ -21,6 +21,8 @@ Virtuaalikoneet:
 ### Asennetut paketit:
 - Homebrew: Paketinhallinta Macille, jolla voi asentaa, päivittää ja hallita erilaisia ​​sovelluksia ja työkaluja.
 - Tmux: multiplekseri, jolla voi hallita usempaa terminaalia samassa ikkunassa.
+- VirtualBox: Virtuaalikoneohjelmisto, joka mahdollistaa esimerkiksi Linux, Windows ja MacOS käyttöjärjestelmien luomisen.
+- Vagrant: Virtuaalisten kehitysympäristöjen hallintatyökalu
 
 ## Homebrew ja Tmux
 Aloitan moduulin tekemisen asentamalla Homebrew paketinhallintajärjestelmän. Homebrew sisältää tarpeellisia paketteja ja kehitystytyökaluja, joita macOS koneista puuttuu. Asensin Homebrew:n [nettisivun ohjeiden mukaisesti](https://brew.sh). 
@@ -54,3 +56,17 @@ Suunnitelmani oli tehdä mac koneesta herra kone, jolla voi antaa määräyksiä
 ### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/d6735053-cf77-47d6-9886-21c07df019c4)
 
 > Kuva 3. Saltin asennus onnistui.
+
+## Orja koneiden luominen
+Aion luoda kahden koneen virtuaaliverkon Vagrantin avulla. Minulla on asennettuna Virtualbox ja Vagrant, joita tarvitaan virtuaalikoneiden luomiseen.
+- [Virtualbox asennus ohjeet](https://www.virtualbox.org/wiki/Downloads)
+- [Vagrantin asennus ohjeet](https://developer.hashicorp.com/vagrant/install)
+  
+1. Loin terminaalissa uuden hakemiston, johon loin uuden Vagrantfile tekstitiedoston. Liitin tekstitiedostoon [Teron skriptin](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/#vagrantfile). Skripti luo valmiiksi kaksi virtuaalikonetta samaan verkkoon, luo niille hakemistopolut ja asentaa niihin tree -ohjelman. Koneille luodaan myös omat isäntänimet ja yksityiset ip-osoitteet.
+
+| kone  |t001|t002|
+|---|----|----|
+|ip|192.168.88.101|192.168.88.102|
+
+### ![image](https://github.com/Lambizzzz/infra-as-code/assets/148875838/af6c17be-d275-4e5d-80cf-096f45175f9f)
+
